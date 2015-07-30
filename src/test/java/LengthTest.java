@@ -1,4 +1,5 @@
 import org.junit.Test;
+import org.lenthAndVolume.*;
 
 import static org.junit.Assert.*;
 
@@ -61,20 +62,20 @@ public class LengthTest {
     @Test
     public void testConversionFromYardToInch()
     {
-        assertEquals(new Inch(36),Converter.convertLength(new Yard(1), ConversionLogic.INCH));
+        assertEquals(new Inch(36), Converter.convertLength(new Yard(1), ConversionLogic.INCH));
     }
 
     @Test
     public void testConversionFromMeterToInch()
     {
-        //System.out.println(Converter.convertToInch(meter).getValue());
+        //System.out.println(org.lenthAndVolume.Converter.convertToInch(meter).getValue());
         assertEquals(new Inch(39.37007874015748), Converter.convertLength(new Meter(1), ConversionLogic.INCH));
     }
 
     @Test
     public void testConversionFromCentiMeterToInch()
     {
-        //System.out.println(Converter.convertToInch(centimeter).getValue());
+        //System.out.println(org.lenthAndVolume.Converter.convertToInch(centimeter).getValue());
         assertEquals(new Inch(0.39370078740157477),Converter.convertLength(new Centimeter(1), ConversionLogic.INCH));
     }
 
@@ -107,6 +108,5 @@ public class LengthTest {
     {
         assertEquals(new Yard(2), new Yard(1).add(new Feet(3)));
     }
-
 
 }

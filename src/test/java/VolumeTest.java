@@ -1,4 +1,5 @@
 import org.junit.Test;
+import org.lenthAndVolume.*;
 
 import static org.junit.Assert.*;
 
@@ -31,7 +32,7 @@ public class VolumeTest {
     @Test
     public void testConvertOunceToTeaSpoon()
     {
-        assertEquals(new TeaSpoon(6),Converter.convertVolume(new Ounce(1),ConversionLogic.TEASPOON));
+        assertEquals(new TeaSpoon(6),Converter.convertVolume(new Ounce(1), ConversionLogic.TEASPOON));
     }
 
     @Test
@@ -43,7 +44,7 @@ public class VolumeTest {
     @Test
     public void testConvertOunceToTableSpoon()
     {
-        assertEquals(new TableSpoon(2),Converter.convertVolume(new Ounce(1),ConversionLogic.TABLESPOON) );
+        assertEquals(new TableSpoon(2), Converter.convertVolume(new Ounce(1), ConversionLogic.TABLESPOON) );
     }
 
 }
