@@ -10,5 +10,9 @@ public class Meter extends  Length{
         return  super.getValueInCentimeters()/(double)100;
     }
 
+    public Meter add(Length length)
+    {
+        return new Meter(this.getValue()+ ((Meter)Converter.convertLength(length,ConversionLogic.METER)).getValue());
 
+    }
 }

@@ -78,4 +78,35 @@ public class LengthTest {
         assertEquals(new Inch(0.39370078740157477),Converter.convertLength(new Centimeter(1), ConversionLogic.INCH));
     }
 
+    @Test
+    public void testAddWhenCallerObjectIsMeter()
+    {
+        assertEquals(new Meter(2), new Meter(1).add(new Centimeter(100)));
+    }
+
+    @Test
+    public void testAddWhenCallerObjectIsCentiMeterMeter()
+    {
+        assertEquals(new Centimeter(200), new Centimeter(100).add(new Meter(1)));
+    }
+
+    @Test
+    public void testAddWhenCallerObjectIsFeet()
+    {
+        assertEquals(new Feet(2), new Feet(1).add(new Inch(12)));
+    }
+
+    @Test
+    public void testAddWhenCallerObjectIsInch()
+    {
+        assertEquals(new Inch(24), new Inch(12).add(new Feet(1)));
+    }
+
+    @Test
+    public void testAddWhenCallerObjectIsYard()
+    {
+        assertEquals(new Yard(2), new Yard(1).add(new Feet(3)));
+    }
+
+
 }

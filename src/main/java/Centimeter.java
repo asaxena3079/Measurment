@@ -9,4 +9,9 @@ public class Centimeter extends Length{
     {
         return  super.getValueInCentimeters();
     }
+
+    public Centimeter add(Length length)
+    {
+        return new Centimeter(this.getValue()+ ((Centimeter)Converter.convertLength(length,ConversionLogic.CENTIMETER)).getValue());
+    }
 }

@@ -10,4 +10,9 @@ public class Inch extends Length {
         return  super.getValueInCentimeters()/(double)2.54;
     }
 
+    public Inch add(Length length)
+    {
+        return new Inch(this.getValue()+ ((Inch)Converter.convertLength(length,ConversionLogic.INCH)).getValue());
+    }
+
 }
